@@ -13,7 +13,7 @@ current_time = now.strftime("%H:%M")
 
 
 # Set up OpenAI API credentials
-openai.api_key = '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'
+openai.api_key = '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'
 
 def ask_openai(question):
     model_engine = "text-davinci-003"
