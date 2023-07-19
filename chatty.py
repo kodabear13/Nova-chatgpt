@@ -46,7 +46,8 @@ def recognize_speech():
 
 def clear_entry(event, entry):
     entry.delete(0, 'end')
-    entry.unbind('<Button-1>', event)        
+    entry.unbind('<Button-1>', event)
+    
 # Creating a window called self.window
 class ChatbotGUI:
     def __init__(self):
