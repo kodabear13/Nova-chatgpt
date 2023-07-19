@@ -1,3 +1,4 @@
+# imports
 import openai
 import speech_recognition as sr
 from tkinter.constants import DISABLED, NORMAL
@@ -5,7 +6,7 @@ import tkinter as tk
 from datetime import datetime
 
 from tkinter import ttk
-from tkinter import messagebox
+#from tkinter import messagebox
 
 now = datetime.now()
 current_time = now.strftime("%H:%M")
@@ -46,7 +47,7 @@ def recognize_speech():
 def clear_entry(event, entry):
     entry.delete(0, 'end')
     entry.unbind('<Button-1>', event)        
-
+# Creating a window called self.window
 class ChatbotGUI:
     def __init__(self):
         self.window = tk.Tk()
@@ -54,6 +55,7 @@ class ChatbotGUI:
         self.window.geometry("600x600")
         self.window.configure(bg='black')
 
+        # Creating a self scroll frame
         self.scroll_frame = tk.Frame(self.window)
         self.scroll_frame.pack(side="top", fill="both", expand=True)
 
@@ -82,7 +84,7 @@ class ChatbotGUI:
         self.listen_button = tk.Button(self.window, text="Parler",width=200, command=self.listen_question, font=("Courier", 20, 'bold'), fg="red")
         self.listen_button.pack(pady=15, padx=15)
         self.window.mainloop()
-
+        
     def clear_all(self):
         self.chat_history.configure(state="normal")
         self.chat_history.delete("1.0", tk.END)
